@@ -2,7 +2,7 @@
 
 class AppFace < Sinatra::Base
   
-  set :public_folder, File.expand_path(File.join(File.dirname(__FILE__), 'public'))
+  set :root, File.expand_path('../..', __FILE__)  
 
   get '/' do
     File.read File.join('public', 'index.html')
